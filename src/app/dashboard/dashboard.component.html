@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1>Dashboard</h1>
+        <div class="d-flex">
+            <!-- <button class="btn btn-success">Add </button> -->
+            <button routerLink="/login" class="btn btn-danger mx-2"  (click)="logout()">Logout</button>
+        </div>
+    </div>
+</nav>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>    
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let dt of personData">
+            <td>{{dt.id}}</td>
+            <td>{{dt.name}}</td>
+            <td>{{dt.email}}</td>
+        </tr>
+    </tbody>
+</table>

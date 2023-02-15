@@ -1,0 +1,21 @@
+.form1 {
+
+    /* margin-right: 100px;
+    margin-left: 200px; */
+    border: 2px solid;
+    text-align: center;
+    padding: 3%;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+
+}
+h4{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+small{
+    margin-top: -10%;
+}

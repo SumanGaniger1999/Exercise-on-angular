@@ -1,0 +1,37 @@
+<div class="form1">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="mb-5">
+      <h4>Register</h4>
+      <label for="name" class="form-label">Name</label>
+      <input type="name" class="form-control " formControlName="name" aria-describedby="nameHelp" placeholder="Name">
+
+      <small *ngIf="name && name.invalid && name.touched" class="text-danger">Please enter valid name</small>
+
+    </div>
+    <div class="mb-5">
+
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control " formControlName="email" aria-describedby="emailHelp"
+        placeholder="Email">
+
+      <small *ngIf="email && email.invalid && email.touched" class="text-danger">Please enter valid Email</small>
+
+
+      <!-- <small *ngIf="registerForm.controls['email'] errors['email']">Enter email</small>  -->
+
+
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password" size="4">
+
+      <small *ngIf="password && password.invalid && password.touched" class="text-danger">Please enter valid
+        password</small>
+    </div>
+
+    <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary">Register</button>
+  </form>
+
+  <a routerLink="/login">Already Register? Click to Login!!</a>
+
+</div>
